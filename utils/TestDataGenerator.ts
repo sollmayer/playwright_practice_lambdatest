@@ -8,9 +8,9 @@ export class TestDataGenerator {
 		return {
 			firstName,
 			lastName,
-			email: this.generateEmail(firstName,lastName),
+			email: TestDataGenerator.generateEmail(firstName,lastName),
 			telephone: faker.phone.number(),
-			password: this.generatePassword(passwordLength),
+			password: TestDataGenerator.generatePassword(passwordLength),
 		};
 	}
 

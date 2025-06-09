@@ -1,5 +1,6 @@
 import { Page, expect } from "@playwright/test";
 import { HeaderComponent } from "./components/HeaderComponent";
+import { PageRoutes } from "../utils/constants";
 
 export class HomePage {
     readonly page: Page;
@@ -11,7 +12,7 @@ export class HomePage {
 	}
 
 	async goto() {
-		await this.page.goto('https://ecommerce-playground.lambdatest.io/');
+		await this.page.goto(PageRoutes.HOME);
 		await expect(this.page).toHaveTitle(/Your Store/); 
 	}
 }
